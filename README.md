@@ -1,2 +1,2 @@
-# RPi-Sprinkler-Controller
-A Raspberry Pi powered sprinkler system controller with GUI
+# ESP32-Sprinkler-Controller
+A ESP32 powered sprinkler system controller with GUI
