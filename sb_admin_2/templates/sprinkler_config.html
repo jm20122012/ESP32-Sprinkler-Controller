@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block page_heading_title %}Sprinkler Config{% endblock %}
+{% block main_content %}
+    <!--Row div begin-->
+    <div class="row">
+        <!--Column div begin-->
+        <div class="col-lg-6 mb-4">
+
+            <!--Card shadow div begin-->
+            <div class="card shadow mb-4">
+                
+                <!--Card header div begin-->
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Zone 1</h6>
+                </div> 
+                <!--Card header div end-->
+                
+                <!-- Card Body Begin-->
+                <div class="card-body">
+
+                    <h6 class="medium font-weight-bold">
+                        Manual Control
+                    </h6>
+
+                    <!--Toggle button begin-->
+                    <form method="post">
+                        <label class="switch">
+                            <input type="checkbox" name="zone_1_toggle" id="zone_1_toggle" value="off">
+                            <span class="slider round"></span>
+                        </label>
+                    </form>
+                    <!--Toggle button end-->
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+                    <h6 class="medium font-weight-bold">
+                        Schedule
+                    </h6>
+                    <div>
+                        <input type="checkbox" id="sunday">
+                        <label for="sunday">Sunday</label>
+                        <label for="sunday_start_time" class="ml-4">Start: </label>
+                        <input type="time" id="sunday_start_time">
+
+                        <hr class="sidebar-divider">
+                        
+                        <input type="checkbox" id="monday">
+                        <label for="monday">Monday</label>
+                        <label for="monday_start_time" class="ml-4">Start: </label>
+                        <input type="time" id="monday_start_time">
+
+                        <hr class="sidebar-divider">
+                        
+                        <input type="checkbox" id="tuesday">
+                        <label for="tuesday">Tuesday</label>
+                        
+                        <hr class="sidebar-divider">
+                        
+                        <input type="checkbox" id="wednesday">
+                        <label for="wednesday">Wednesday</label>
+                        <label for="wednesday_start_time" class="ml-4">Start: </label>
+                        <input type="time" id="wednesday_start_time">
+
+                        <hr class="sidebar-divider">
+                        
+                        <input type="checkbox" id="thursday">
+                        <label for="thursday">Thursday</label>
+                        
+                        <hr class="sidebar-divider">
+                        
+                        <input type="checkbox" id="friday">
+                        <label for="friday">Friday</label>
+                        
+                        <hr class="sidebar-divider">
+                        
+                        <input type="checkbox" id="saturday">
+                        <label for="saturday">Saturday</label>
+                    </div>
+
+                </div> 
+                <!--Card body end-->
+
+            </div>
+            <!--Card shadow div end-->
+
+        </div>
+
+        <!-- Zone 2 Column div begin-->
+        <div class="col-lg-6 mb-4">
+
+            <!--Card shadow div begin-->
+            <div class="card shadow mb-4">
+                
+                <!--Card header div begin-->
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Zone 2</h6>
+                </div> 
+                <!--Card header div end-->
+                
+                <!-- Card Body Begin-->
+                <div class="card-body">
+
+                    <h6 class="medium font-weight-bold">
+                        Manual Control
+                    </h6>
+
+                    <!--Toggle button begin-->
+                    <form method="post">
+                        <label class="switch">
+                            <input type="checkbox" name="zone_2_toggle" id="zone_2_toggle" value="off">
+                            <span class="slider round"></span>
+                        </label>
+                    </form>
+                    <!--Toggle button end-->
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+                    <h6 class="medium font-weight-bold">
+                        Schedule
+                    </h6>
+
+                    <div class="row">
+                        <div class="column ml-3">
+                            <input type="checkbox" id="sunday">
+                            <label for="sunday">Sunday</label>
+                        </div>
+                        <div class="column mb-1">
+                            <label for="sunday_start_time" class="ml-4">Start: </label>
+                            <input type="time" id="sunday_start_time">
+                        </div>
+                    </div>                    
+                        <input type="checkbox" id="monday">
+                        <label for="monday">Monday</label><br>
+                        <input type="checkbox" id="tuesday">
+                        <label for="tuesday">Tuesday</label><br>
+                        <input type="checkbox" id="wednesday">
+                        <label for="wednesday">Wednesday</label><br>
+                        <input type="checkbox" id="thursday">
+                        <label for="thursday">Thursday</label><br>
+                        <input type="checkbox" id="friday">
+                        <label for="friday">Friday</label><br>
+                        <input type="checkbox" id="saturday">
+                        <label for="saturday">Saturday</label>
+                    
+
+                </div> 
+                <!-- Zone 2 Card body end-->
+
+            </div>
+            <!-- Zone 2 Card shadow div end-->
+
+        </div>
+        <!-- Zone 2 Column div begin-->
+
+    </div>
+    <!--Row div End-->
+    <script>
+        const Http = new XMLHttpRequest();
+        var zone_1_toggle = document.getElementById("zone_1_toggle");
+        var zone_2_toggle = document.getElementById("zone_2_toggle");
+        var zone_1_current;
+        var zone_2_current;
+
+        zone_1_toggle.oninput = function(){
+            console.log(zone_1_toggle.id);
+            console.log("Zone 1 toggle state change");
+            console.log("Zone 1 toggle current value: " + this.value);
+            if (this.value == "on"){
+                console.log("Changing zone 1 toggle to off");
+                this.value = "off";
+            }
+            else if (this.value == "off"){
+                console.log("Changing zone 1 toggle to on");
+                this.value = "on";
+            }
+            zone_1_current = this.value;
+            Http.open('POST', '/toggle_test')
+            Http.send(zone_1_current)
+        }   
+    </script>
+{% endblock %}

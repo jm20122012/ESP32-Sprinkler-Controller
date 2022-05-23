@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block page_heading_title %}Dashboard{% endblock %}
+{% block main_content %}
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Content Column -->
+        <div class="col-lg-6 mb-4">
+
+            <!-- Project Card Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Sprinkler Zones</h6>
+                </div>
+                <!--Card Body Begin-->
+                <div class="card-body">
+                    <!--Zone 1 Status Bar Begin-->
+                    <h4 class="small font-weight-bold">Zone 1 (Front Yard)
+                        <span class="float-right">Complete!</span>
+                    </h4>
+                    
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        </div>    
+                    </div>
+                    <!--Zone 1 Status Bar End-->
+
+                    <!--Zone 2 Status Bar Begin-->
+                    <h4 class="small font-weight-bold">Zone 2 (Front Yard) 
+                        <span class="float-right">Complete!</span>
+                    </h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div> 
+                    <!--Zone 2 Status Bar End-->
+
+                    <!--Zone 3 Status Bar Begin-->
+                    <h4 class="small font-weight-bold">Zone 3 (Back Yard) 
+                        <span class="float-right">Complete!</span>
+                    </h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                    <!--Zone 3 Status Bar End-->
+
+                    <!--Zone 4 Status Bar Begin-->
+                    <h4 class="small font-weight-bold">Zone 4 (Back Yard) 
+                        <span class="float-right">Complete!</span>
+                    </h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                    <!--Zone 4 Status Bar End-->                                                                                                           
+                </div> <!--Card Body End-->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</html>
