@@ -1,0 +1,156 @@
+{
+    "sprinklers": [
+        {
+            "id": 1,
+            "name": "Sprinkler 1",
+            "location": "Front Yard",
+            "zone": "Front Yard - West",
+            "status": "on",
+            "onDuration": "10",
+            "events": [
+                {
+                    "weekday": "Monday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Tuesday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Sprinkler 2",
+            "location": "Front Yard",
+            "zone": "Front Yard - North",
+            "status": "On",
+            "onDuration": "7",
+            "events": [
+                {
+                    "weekday": "Monday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Tuesday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Wednesday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Thursday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Sprinkler 3",
+            "location": "Back Yard",
+            "zone": "Back Yard - North",
+            "status": "on",
+            "onDuration": "10",
+            "events": [
+                {
+                    "weekday": "Monday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Tuesday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Wednesday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Sprinkler 4",
+            "location": "Back Yard",
+            "zone": "Back Yard - West",
+            "status": "on",
+            "onDuration": "10",
+            "events": [
+                {
+                    "weekday": "Monday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Tuesday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Wednesday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Wednesday",
+                    "startHour": "4",
+                    "startMinute": "30",
+                    "duration": "5",
+                    "amPm": "PM",
+                    "status": "Off"
+                },
+                {
+                    "weekday": "Thursday",
+                    "startHour": "8",
+                    "startMinute": "00",
+                    "duration": "10",
+                    "amPm": "AM",
+                    "status": "Off"
+                }
+            ]
+        }
+    ]
+}
