@@ -9,7 +9,10 @@ dotenv.config();
 const API_HOST = process.env.API_HOST;
 const API_PORT = process.env.API_PORT;
 const DB_HOST = process.env.DB_HOST;
-const DB_PORT = process.env.DB_PORT;
+const DB_PORT = process.env.DB_PORT;    
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+const DB_NAME = process.env.DB_NAME;
 const MQTT_HOST = process.env.MQTT_HOST;
 const MQTT_PORT = process.env.MQTT_PORT;
 
