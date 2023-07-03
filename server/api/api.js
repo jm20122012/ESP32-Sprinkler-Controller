@@ -21,9 +21,9 @@ const app = express();
 const client = new Client({
     host: DB_HOST,
     port: DB_PORT,
-    user: 'postgres',
-    password: 'password',
-    database: 'sprinkler_system_db'
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_NAME
 });
 
 const mqttClient = mqtt.connect(`mqtt://${MQTT_HOST}:${MQTT_PORT}`);
